@@ -1,5 +1,7 @@
 package com.ghen61.agabankh;
 
+import android.view.View;
+
 /**
  * Created by LG on 2018-06-13.
  */
@@ -11,6 +13,8 @@ public class ListViewItem {
     private String money;
     private String month;
     private String onetime;
+
+    public View.OnClickListener onClickListener;
 
     public String getAccount() {
         return account;

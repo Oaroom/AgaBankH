@@ -42,6 +42,13 @@
         android:background="#efefef" />
 
 
+    <Button
+        android:id="@+id/test"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="계좌이체 테스트용"
+        />
+
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

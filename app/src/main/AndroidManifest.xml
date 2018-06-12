@@ -24,6 +24,11 @@
         <activity android:name=".SignupActivity">
 
         </activity>
+
+        <activity android:name=".SendActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
