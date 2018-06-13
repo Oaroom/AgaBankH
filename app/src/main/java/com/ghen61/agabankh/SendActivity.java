@@ -36,11 +36,13 @@ public class SendActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_send);
 
-        button1 = (Button)findViewById(R.id.submit);
-        name = (EditText)findViewById(R.id.name);
-        acc = (EditText)findViewById(R.id.acc);
-        money = (EditText)findViewById(R.id.money);
-        spinner = (Spinner)findViewById(R.id.spinner);
+        button1=(Button)findViewById(R.id.submit);
+        name=(EditText)findViewById(R.id.name);
+        acc=(EditText)findViewById(R.id.acc);
+        money=(EditText)findViewById(R.id.money);
+        spinner=(Spinner)findViewById(R.id.spinner);
+
+
 
 
 
@@ -48,7 +50,7 @@ public class SendActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                intent = new Intent(SendActivity.this, MainActivity.class);
+                intent = new Intent(SendActivity.this,MainActivity.class);
                 startActivity(intent);
 
             }
