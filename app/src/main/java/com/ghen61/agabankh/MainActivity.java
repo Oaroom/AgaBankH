@@ -12,7 +12,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -22,6 +25,13 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
 
 
     Intent intent = null;
+    Intent Main;
+
+    TextView name;
+
+
+    //사용자의 아이디가 들어가있는 변수. 백엔드 친구들 이걸 사용하세요!!
+    String userID;
 
     ImageButton setting;
 
@@ -31,15 +41,25 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
         setContentView(R.layout.activity_main);
 
 
+        name = (TextView)findViewById(R.id.name);
+
+
+
+        //login 페이지에서 값을 받아와서 넘김
+        Main=getIntent();
+        userID  = Main.getStringExtra("loginID");
+        name.setText(userID+"님");
+
         setting = (ImageButton)findViewById(R.id.setting);
 
 
-       ArrayList<ListViewItem> items = new ArrayList<ListViewItem>();
 
         ListView listView;
         ListAdapter listAdapter;
+        ArrayList<ListViewItem> items = new ArrayList<ListViewItem>();
 
-        loadItemsFrom(items);
+
+      //  loadItemsFrom(items);
 
 
         listAdapter = new ListAdapter(this,R.layout.layout_item,items,this);
@@ -50,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
 
         listAdapter.addItem("1111111111","50,000","1,000","50,000");
         listAdapter.addItem("2222222222","40,000","1,400","20,000");
-
 
 
         setting.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +95,9 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
 
 
         }
-
+/*
     private  boolean loadItemsFrom(ArrayList<ListViewItem> list) {
+
 
         ListViewItem item;
 
@@ -96,12 +116,12 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
             item.setMonth("4");
             i++;
 
-
+            list.add(item);
 
         }
         return true;
     }
-
+*/
 
     @Override
     public void onListBtnClick(String type){
@@ -112,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
                              startActivity(intent); break;
 
                 case "send": intent = new Intent(MainActivity.this, SendActivity.class);
-                    startActivity(intent); break;
+                             startActivity(intent); break;
 
 
             }

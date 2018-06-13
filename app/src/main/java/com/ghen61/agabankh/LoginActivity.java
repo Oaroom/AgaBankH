@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText pwEdit;
     Button submit;
     TextView singup;
-    Intent intent = null;
+    Intent login = null;
 
     //사용자가 입력한 아이디와 비밀번호
     String id;
@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     //DB에서 확인을 위한 아이디와 비밀번호
     String idDB = "hello";
     String pwDB = "world";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +51,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                intent = new Intent(LoginActivity.this,SignupActivity.class);
-                startActivity(intent);
+
+
+                login = new Intent(LoginActivity.this,SignupActivity.class);
+
+
+                startActivity(login);
                 finish();
 
 
@@ -69,13 +74,19 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-
                 if(id.equals(idDB) && pw.equals(pwDB)){
 
                     Toast.makeText(LoginActivity.this, "로그인성공!", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(LoginActivity.this,MainActivity.class);
-                    startActivity(intent);
+
+
+                    login = new Intent(LoginActivity.this,MainActivity.class);
+                    login.putExtra("loginID",id);
+
+                    startActivity(login);
                     finish();
+
+
+
 
                 }else{
 

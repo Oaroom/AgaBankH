@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -20,17 +21,15 @@ public class SendActivity extends AppCompatActivity {
     EditText acc;
     EditText money;
     Spinner spinner;
+    TextView myAcc;
 
     Intent intent = null;
+    Intent accIntent = getIntent();
 
-    /*
-    * jsp에서의 getParameter와 비슷
-    *
-    * Intent intent = getIntent();
-    *
-    *
-    * String data = intent.getStringExtra("value");
-    * */
+
+    // 계좌번호가 들어가 있는 변수. 백엔드 친구들 이걸 이용하세요~!~
+//    String userAcc = accIntent.getStringExtra("acc");
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +40,11 @@ public class SendActivity extends AppCompatActivity {
         acc=(EditText)findViewById(R.id.acc);
         money=(EditText)findViewById(R.id.money);
         spinner=(Spinner)findViewById(R.id.spend);
+        myAcc = (TextView)findViewById(R.id.myAcc);
+
+      //  myAcc.setText(userAcc);
+
+
 
 
 
