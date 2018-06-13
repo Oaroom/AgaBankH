@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Intent intent = null;
     Button button;
     Button button1;
+    ImageButton setting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView)findViewById(R.id.list);
         button = (Button)findViewById(R.id.test);
         button1 = (Button)findViewById(R.id.test1);
-
+        setting = (ImageButton)findViewById(R.id.setting);
 
         listAdapter = new ListAdapter();
 
@@ -55,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this,ShowActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                intent = new Intent(MainActivity.this,SettingActivity.class);
+                startActivity(intent);
             }
         });
 
