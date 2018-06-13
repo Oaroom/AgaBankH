@@ -28,8 +28,7 @@ public class CreateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                intent = new Intent(CreateActivity.this,MainActivity.class);
-                startActivity(intent);
+
                 finish();
 
             }
