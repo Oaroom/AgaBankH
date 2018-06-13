@@ -100,16 +100,14 @@ public class ListAdapter extends BaseAdapter implements View.OnClickListener {
         month.setText(listitem.getMonth());
 
 
-
-
-
+        //계좌번호를 같이 넘거야하는데,,,,
         Button showB = (Button) convertView.findViewById(R.id.showB);
-        showB.setTag("show");
+        showB.setTag("show/"+acc.getText());
         showB.setOnClickListener(this);
 
 
         Button sendB = (Button) convertView.findViewById(R.id.sendB);
-        sendB.setTag("send");
+        sendB.setTag("send/"+acc.getText());
         sendB.setOnClickListener(this);
 
 

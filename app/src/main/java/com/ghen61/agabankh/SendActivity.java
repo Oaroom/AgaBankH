@@ -24,14 +24,17 @@ public class SendActivity extends AppCompatActivity {
     TextView myAcc;
 
     Intent intent = null;
-    Intent accIntent = getIntent();
 
-
-    // 계좌번호가 들어가 있는 변수. 백엔드 친구들 이걸 이용하세요~!~
-//    String userAcc = accIntent.getStringExtra("acc");
 
 
     protected void onCreate(Bundle savedInstanceState) {
+
+        Intent accIntent = getIntent();
+
+        // 계좌번호가 들어가 있는 변수. 백엔드 친구들 이걸 이용하세요~!~
+        String userAcc = accIntent.getStringExtra("acc");
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_send);
 
@@ -42,7 +45,7 @@ public class SendActivity extends AppCompatActivity {
         spinner=(Spinner)findViewById(R.id.spend);
         myAcc = (TextView)findViewById(R.id.myAcc);
 
-      //  myAcc.setText(userAcc);
+        myAcc.setText(userAcc);
 
 
 

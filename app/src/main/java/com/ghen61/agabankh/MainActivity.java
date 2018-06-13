@@ -126,12 +126,17 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.ListB
     @Override
     public void onListBtnClick(String type){
 
-            switch (type){
+            String values[] = type.split("/");
+
+
+            switch (values[0]){
 
                 case "show": intent = new Intent(MainActivity.this, ShowActivity.class);
+                                intent.putExtra("acc",String.valueOf(values[1]));
                              startActivity(intent); break;
 
                 case "send": intent = new Intent(MainActivity.this, SendActivity.class);
+                    intent.putExtra("acc",String.valueOf(values[1]));
                              startActivity(intent); break;
 
 
