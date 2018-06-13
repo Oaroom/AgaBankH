@@ -34,11 +34,19 @@
         />
 
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:text="* 본인 확인을 위한 절차입니다. "
+        />
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-
-        android:layout_marginTop="70dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
@@ -54,14 +62,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="20dp"
-                android:text="이름" />
+                android:text="아이디" />
 
             <EditText
                 android:id="@+id/nameText"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
                 android:background="@drawable/rounded"
-                android:contentDescription="이름" />
+                android:contentDescription="아이디" />
 
         </LinearLayout>
 
@@ -79,7 +87,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:text="전화번호" />
+                android:text="비밀번호" />
 
 
             <EditText
@@ -88,11 +96,25 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded"
-                android:contentDescription="전화번호" />
+                android:contentDescription="비밀번호" />
 
 
         </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#fafafa" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* 개설할 계좌의 한도 금액을 정해주세요 " />
+
 
         <LinearLayout
             android:layout_width="351dp"
@@ -144,6 +166,7 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded"
                 android:contentDescription="모든 결제에 적용되는 한도금액입니다." />
 
@@ -154,7 +177,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/makeAccB"
+        android:id="@+id/createB"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"

@@ -44,6 +44,11 @@ public class SettingActivity extends AppCompatActivity{
 
                     case 0: intent = new Intent(SettingActivity.this,CreateActivity.class);
                             startActivity(intent);
+                            finish();break;
+                    case 1:
+                        Toast.makeText(SettingActivity.this, "준비중입니다.", Toast.LENGTH_SHORT).show(); break;
+                    case 2:
+                        Toast.makeText(SettingActivity.this, "준비중입니다.", Toast.LENGTH_SHORT).show(); break;
 
 
                 }
