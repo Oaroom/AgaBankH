@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     Intent intent = null;
     Button button;
+    Button button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView)findViewById(R.id.list);
         button = (Button)findViewById(R.id.test);
+        button1 = (Button)findViewById(R.id.test1);
 
 
         listAdapter = new ListAdapter();
@@ -45,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                intent = new Intent(MainActivity.this,ShowActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
 
 
 
