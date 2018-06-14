@@ -25,6 +25,8 @@ public class SendActivity extends AppCompatActivity {
 
     Intent intent = null;
 
+    String sendName;
+    String sendMoney;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,13 @@ public class SendActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+                sendMoney = money.getText().toString();
+                sendName = name.getText().toString();
+
                 intent = new Intent(SendActivity.this,NoticeActivity.class);
+                intent.putExtra("name",sendName);
+                intent.putExtra("money",sendMoney);
                 startActivity(intent);
                 finish();
 

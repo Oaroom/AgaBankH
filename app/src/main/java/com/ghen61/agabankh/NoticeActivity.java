@@ -16,15 +16,27 @@ public class NoticeActivity extends AppCompatActivity {
     TextView nameT;
     TextView moneyT;
     Intent intent;
+
+
+    String sendName;
+    String sendMoney;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_result);
 
 
+        intent = getIntent();
+
+        sendName = intent.getStringExtra("name");
+        sendMoney = intent.getStringExtra("money");
+
         button = (Button) findViewById(R.id.okB);
         nameT = (TextView) findViewById(R.id.name);
         moneyT = (TextView) findViewById(R.id.money);
 
+        nameT.setText(sendName);
+        moneyT.setText(sendMoney);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
