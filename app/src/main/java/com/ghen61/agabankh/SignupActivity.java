@@ -36,6 +36,17 @@ public class SignupActivity extends AppCompatActivity {
 
 
 
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                intent = new Intent(SignupActivity.this,LoginActivity.class);
+
+
+            }
+        });
+
+
 
     }
 }
